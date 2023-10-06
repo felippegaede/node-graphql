@@ -1,0 +1,13 @@
+  
+version: '3'
+services:
+  vuejs-graphql:
+    build:
+      context: ./
+      dockerfile: Dockerfile-dev
+    ports:
+      - "8088:8080"
+    container_name: graphql-projeto-final-front
+    volumes:
+       - ./:/usr/src/app/api
+       - /usr/src/app/api/node_modules
